@@ -1,0 +1,26 @@
+style.
+	.tools{
+		display: none;
+		position: absolute;
+		z-index: 99999;
+	}
+	.tools ul{
+		width: 300px;
+		height: 48px;
+		padding: 0;
+	}
+	.tools li{
+		float: left;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		width: 100px;
+		line-height: 48px;
+		text-align: center;
+		background-color: #ccc;
+	}
+div.tools
+	ul
+		li(data-command="del") 删除
+		li(data-command="blankpre") 前空行
+		li(data-command="blankafter") 后空行

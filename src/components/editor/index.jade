@@ -1,22 +1,56 @@
 style.
 	ul{
 		float: left;
-		width: 100px;
+		width: 320px;
+		margin: 0 50px;
+		padding: 0;
+		max-height: 800px;
+		overflow: auto;
+	}
+	ul li{
+		list-style: none;
 	}
 	#editor{
 		float: left;
+		max-height: 800px;
+		overflow: auto;
+	}
+	.focus{
+		border: 1px dotted rgb(253, 140, 37);
+	}
+	img{
+		width: 100%;
+	}
+	body, ul, li, p, h1, h2, h3, h4, select, section, blockquote {
+		margin: 0;
+		padding: 0;
+		font-family: 'Microsoft Yahei';
+	}
+	.select-show{
+		margin-right: 100px;
+	}
+	.select-show li * {
+		max-width: 100%!important;
+		box-sizing: border-box!important;
+		-webkit-box-sizing: border-box!important;
+		word-wrap: break-word!important;
+	}
+	.edui-editor{
+		border: none!important;
+	}
+	.edui-editor-toolbarbox{
+		border: 1px solid #d4d4d4;
+	}
+	.edui-editor-iframeholder{
+		border: 1px solid #d4d4d4;
+		margin-top: 10px;
+	}
+	.edui-editor-bottomContainer{
+		display: none;
 	}
 div
-	ul
-		li(data-role="title")
-			a(href="javascript:void(0)") 标题
-		li(data-role="content")
-			a(href="javascript:void(0)") 正文
-		li
-			a(href="javascript:void(0)") 图片
-		li
-			a(href="javascript:void(0)") 标题
-		li
-			a(href="javascript:void(0)") 标题
+	ul.select-show
+		each item, key in list
+			li(data-role="#{key}")!= item()
 
-	script(id="editor", type="text/plain", style="width:320px;height:600px;")
+	script(id="editor", type="text/plain", style="width:500px;height:600px;")
